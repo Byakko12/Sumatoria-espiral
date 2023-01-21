@@ -1,0 +1,120 @@
+n = 5
+x = 0
+y = 0
+valor = 0
+position = n - 1
+matrix=[]
+for (x = y; x <= position; x++)
+matrix[y][x]= valor++;
+
+n = 5
+x = 1
+y = 0
+valor = 1
+position = n - 1
+matrix=[[1]]
+for (x = y; x <= position; x++)
+matrix[y][x]= valor++;
+
+n = 5
+x = 2
+y = 0
+valor = 2
+position = n - 1
+matrix=[[1,2]]
+for (x = y; x <= position; x++)
+matrix[y][x]= valor++;
+
+n = 5
+x = 3
+y = 0
+valor = 3
+position = n - 1
+matrix=[[1, 2 , 3]]
+for (x = y; x <= position; x++)
+matrix[y][x]= valor++;
+
+n = 5
+x = 4
+y = 0
+valor = 4
+position = n - 1
+matrix=[[1, 2 , 3, 4]]
+for (x = y; x <= position; x++)
+matrix[y][x]= valor++;
+
+n = 5
+x = 5
+y = 0
+valor = 5
+position = n - 1
+matrix=[[1, 2 , 3, 4, 5]]
+for (x = y; x <= position; x++)
+matrix[y][x]= valor++;
+
+n = 5
+x = 0
+y = 0
+valor = 5
+position = n - 1
+matrix=[[1, 2 , 3, 4, 5]]
+for (x = y + 1; x <= position; x++)
+matrix[x(1)][position(4)]= valor++;
+
+n = 5
+x = 0
+y = 0
+valor = 6
+position = n - 1
+matrix=[[1, 2 , 3, 4, 5],
+        [             6]]
+for (x = y + 1; x <= position; x++)
+matrix[x(2)][position(4)]= valor++;
+
+n = 5
+x = 0
+y = 0
+valor = 7
+position = n - 1
+matrix=[[1, 2 , 3, 4, 5],
+        [             6],
+        [             7],]
+for (x = y + 1; x <= position; x++)
+matrix[x(3)][position(4)]= valor++;
+
+n = 5
+x = 0
+y = 0
+valor = 8
+position = n - 1
+matrix=[[1, 2 , 3, 4, 5],
+        [             6],
+        [             7],
+        [             8]]
+for (x = y + 1; x <= position; x++)
+matrix[x(4)][position(4)]= valor++;
+
+n = 5
+x = 0
+y = 0
+valor = 9
+position = n - 1
+matrix=[[1, 2 , 3, 4, 5],
+        [             6],
+        [             7],
+        [             8],
+        [             9]]
+
+
+n = 5
+x = 0
+y = 0
+valor = 8
+position = n - 1
+matrix=[[1, 2 , 3, 4, 5],
+        [             6],
+        [             7],
+        [             8],
+        [             9]]
+for (x = position - 1; x >= position; x--)
+matrix[position][x(3)]= valor++;
