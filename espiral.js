@@ -65,7 +65,6 @@ function spiralRightLeft(num1, num2) {
         }
 
         for (x = position - 1; x >= y + 1; x--) {
-            console.log("x=",x,"y=", y, "position=", position)
             matrix[x][position] = valor--;
         }
         y++
@@ -112,7 +111,7 @@ function diagonalSummation(matrix = []) {
 
 
     }
-    return total
+    return "the sum of their main diagonals is ".concat(total)
 }
 
 module.exports = { spiralLeftRight, diagonalSummation, spiralRightLeft}
