@@ -12,4 +12,11 @@ La siguiente espiral de 5 × 5 se forma desde su elemento central comenzando del
 
 En esta espiral, la suma de sus diagonales principales es 101.
 
+
+<image src="./diagonal_5.PNG" alt="101">
+
+
 El objetivo es escribir un programa escrito en Javascript que entregue la suma de las diagonales de una espiral de 1003 × 1003 creada tal como en el ejemplo.
+
+
+<image src="./diagonal_1003.PNG" alt="1003">
