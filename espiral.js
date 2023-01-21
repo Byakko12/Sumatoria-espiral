@@ -13,18 +13,21 @@ function spiralLeftRight(num1, num2) {
     let valor = num1 * num2
     let position = n - 1
 
-    //create array 2d
+    //Create array 2d
     for (let i = 0; i < num1; i++) {
         matrix[i] = new Array(num2);
     }
-    //fill numbers in spiral
+    //Fill numbers in spiral
     while (valor > 0) {
+        //Firstable fill in the numbers from right to left.
         for (x = y; x <= position; x++) {
             matrix[y][x] = valor--;
         }
+
         for (x = y + 1; x <= position; x++) {
             matrix[x][position] = valor--;
         }
+
         for (x = position - 1; x >= y; x--) {
             matrix[position][x] = valor--;
         }
@@ -52,18 +55,34 @@ function spiralRightLeft(num1, num2) {
     }
     //fill numbers in spiral
     while (valor > 0) {
+        /*
+        fill in the numbers from right to left at the
+         top of the matrix
+        */
         for (x = position; x >= y; x--) {
             matrix[y][x] = valor--;
         }
-  
+        /*
+        Then, they are filled from the top left of the matrix 
+        downwards, without counting the matrix downwards, without 
+        counting the first number in the upper left part of the matrix.
+        */
         for (x = y + 1; x <= position; x++) {
             matrix[x][y] = valor--;
         }
-
+        /*
+        the cells of the matrix are filled in at the bottom,
+         from left to right, not counting the one from left to right,
+          not counting the number in the lower left corner.
+        */
         for (x = y + 1; x <= position; x++) {
             matrix[position][x] = valor--;
         }
-
+        /*
+        the spaces in the matrix are filled from the bottom right
+         to the top, not counting the last one at the bottom left
+          and the first one at the top right.
+        */
         for (x = position - 1; x >= y + 1; x--) {
             matrix[x][position] = valor--;
         }
@@ -83,7 +102,7 @@ function diagonalSummation(matrix = []) {
     let y = 0
     let total = 0
     let length = matrix.length
-    if (length%2 != 0){
+    if (length % 2 != 0) {
         total = -1
     }
     //Sum first diagonal from left to right
@@ -114,4 +133,4 @@ function diagonalSummation(matrix = []) {
     return "the sum of their main diagonals is ".concat(total)
 }
 
-module.exports = { spiralLeftRight, diagonalSummation, spiralRightLeft}
+module.exports = { spiralLeftRight, diagonalSummation, spiralRightLeft }
