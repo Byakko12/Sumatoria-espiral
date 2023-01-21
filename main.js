@@ -1,7 +1,6 @@
 const espiral = require('./espiral')
 
-function main() {
-    
-    let result = espiral.espiral(6,6)
-    console.log(result)
-}
+let result = espiral.espiral(4, 4)
+let totalSum = espiral.diagonalSummation(result)
+console.log(result)
+console.log(totalSum)

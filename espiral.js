@@ -28,6 +28,36 @@ function espiral(num1, num2) {
     return matrix
 
 }
-console.log(espiral(5,5))
 
-module.exports = { espiral }
+
+function diagonalSummation(matrix = []) {
+    let x = 0
+    let y = 0
+    let total = 0
+    let length = matrix.length
+
+    for (x = 0; x <= length - 1; x++) {
+        for (y = 0; y <= length - 1; y++) {
+            if (matrix[x] === matrix[y]) {
+                total += matrix[x][y]
+                console.log(total, "izquierda derecha")
+            }
+        }
+    }
+
+    x = 0
+    y = length - 1
+    while (x <= length - 1 && y > -1) {
+        console.log("x =", x, "y =", y, "length =", length)
+        // 4 * 4 
+        // 32 + 24
+        total += matrix[x][y]
+        console.log(total, "derecha izquierda")
+        x++
+        y--
+
+
+    }
+    return total
+}
+module.exports = { espiral, diagonalSummation }
